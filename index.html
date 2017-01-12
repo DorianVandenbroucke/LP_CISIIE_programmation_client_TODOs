@@ -16,18 +16,14 @@
       <!-- controller -->
   </head>
 
-  <body class="grid_float" ng-app="shop">
+  <body class="grid_float" ng-app="todo">
 
-    <section class="column_4 offset_1" ng-controller="ProductController" id="products">
-      <h2 class="text-align-center">Liste des produits</h2>
-      <div ng-repeat="product in products" class="info-alert">
-        <product />
-      </div>
-    </section>
+    <input type="text" ng-model="urname" />
 
-    <section class="column_2" ng-controller="CartController" id="cart">
-      <h2 class="text-align-center">Mon panier</h2>
-      <cart />
+    <h1>Liste de vos tâches</h1>
+
+    <section>
+      <lists />
     </section>
 
   </body>
