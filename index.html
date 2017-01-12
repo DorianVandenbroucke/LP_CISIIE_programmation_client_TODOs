@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+  <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="lib/css/vandenbr3u_library/css/theme.css">
+      <title>TODOS</title>
+      <!-- library -->
+      <script src="lib/js/jquery.js"></script>
+      <script src="lib/js/angular-1.6.1/angular.min.js"></script>
+      <script src="app/app.js"></script>
+      <!-- directive -->
+      <!-- model -->
+      <!-- controller -->
+  </head>
+
+  <body class="grid_float" ng-app="shop">
+
+    <section class="column_4 offset_1" ng-controller="ProductController" id="products">
+      <h2 class="text-align-center">Liste des produits</h2>
+      <div ng-repeat="product in products" class="info-alert">
+        <product />
+      </div>
+    </section>
+
+    <section class="column_2" ng-controller="CartController" id="cart">
+      <h2 class="text-align-center">Mon panier</h2>
+      <cart />
+    </section>
+
+  </body>
+
+</html>
