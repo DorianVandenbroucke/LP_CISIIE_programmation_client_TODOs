@@ -1,5 +1,5 @@
 <h3>Vos listes</h3>
 <div class="info-alert" ng-repeat="list in lists">
   <div><strong>{{list.label}}</strong></div>
-  <div><button>Delete</button></div>
+  <div><button ng-click="deleteList()" id="{{list.id}}">Delete</button></div>
 </div>
