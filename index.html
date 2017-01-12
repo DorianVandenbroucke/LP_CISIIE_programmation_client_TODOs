@@ -12,17 +12,20 @@
       <!-- app repertory -->
       <script src="app/app.js"></script>
       <!-- directive -->
+      <script src="app/directive/list_directive.js"></script>
       <!-- model -->
+      <script src="app/model/list.js"></script>
       <!-- controller -->
+      <script src="app/controller/list_controller.js"></script>
   </head>
 
   <body class="grid_float" ng-app="todo">
 
     <input type="text" ng-model="urname" />
 
-    <h1>Liste de vos tâches</h1>
+    <h1>Listes de vos tâches</h1>
 
-    <section>
+    <section ng-controller="ListController" id="lists">
       <lists />
     </section>
 
