@@ -5,10 +5,6 @@ angular.module("todo").service("List",["$http",
             this.id = data.id;
         }
 
-        List.prototype.detailList = function(){
-            console.log(this);
-        }
-
         return List;
     }
 ]);
