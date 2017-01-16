@@ -8,8 +8,10 @@ angular.module("todo").directive("lists",[
                     console.log(element);
                 },
                 scope.detailList = function(){
-                    console.log(scope);
                     scope.lists.detailList();
+                },
+                scope.addList = function() {
+                    console.log(this);
                 }
             }
         };
