@@ -11,7 +11,7 @@ angular.module("todo").directive("lists",[
                     scope.lists.detailList();
                 },
                 scope.addList = function() {
-                    console.log(this);
+                    console.log(this.listName);
                 }
             }
         };
