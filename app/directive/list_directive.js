@@ -4,8 +4,8 @@ angular.module("todo").directive("lists",[
             restrict: "E",
             templateUrl: "app/templates/lists.html",
             link: function(scope, element, attrs){
-                scope.deleteList = function(){
-                    console.log(element);
+                scope.deleteList = function(list){
+                    list.deleteList();
                 },
                 scope.detailList = function(list){
                     list.detailList();
