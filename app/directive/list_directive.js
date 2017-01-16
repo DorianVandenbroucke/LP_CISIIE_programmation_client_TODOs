@@ -5,8 +5,11 @@ angular.module("todo").directive("lists",[
             templateUrl: "app/templates/lists.html",
             link: function(scope, element, attrs){
                 scope.deleteList = function(){
-                    // TODO: Recup element clické
                     console.log(element);
+                },
+                scope.detailList = function(){
+                    console.log(scope);
+                    scope.lists.detailList();
                 }
             }
         };

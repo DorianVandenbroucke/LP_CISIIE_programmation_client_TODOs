@@ -4,6 +4,11 @@ angular.module("todo").service("List",["$http",
             this.label = data.label;
             this.id = data.id;
         }
+
+        List.prototype.detailList = function(){
+            console.log(this);
+        }
+
         return List;
     }
 ]);

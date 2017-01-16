@@ -5,7 +5,7 @@ angular.module("todo").controller("ListController",["$scope", "$http", "List",
                 "Authorization": "Token token=47244e6526354e15a3b3f9386de73d24"
             }
         }).then(function(response){
-            console.log(response);
+            // console.log(response);
             $scope.lists = [];
             response.data.forEach(function(data){
                 var newList = new List(data);
