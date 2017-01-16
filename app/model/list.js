@@ -6,7 +6,7 @@ angular.module("todo").service("List",["$http",
         }
 
         List.prototype.detailList = function(){
-            console.log(this);
+            List.currentList = this;
         }
 
         return List;

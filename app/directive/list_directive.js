@@ -7,8 +7,8 @@ angular.module("todo").directive("lists",[
                 scope.deleteList = function(){
                     console.log(element);
                 },
-                scope.detailList = function(){
-                    scope.lists.detailList();
+                scope.detailList = function(list){
+                    list.detailList();
                 },
                 scope.addList = function() {
                     console.log(this.list_name);
