@@ -8,11 +8,11 @@ angular.module("todo").directive("lists", [
                     list.deleteList();
                 },
                 scope.detailList = function(list){
+                    console.log(list);
                     list.detailList();
                 },
-                scope.addList = function(lists){
-                    console.log(lists.prototype);
-                    //lists.__proto__.addList();
+                scope.addList = function(l){
+                     l[0].addList(this.list_name);
                 }
             }
         };

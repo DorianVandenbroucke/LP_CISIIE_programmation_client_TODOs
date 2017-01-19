@@ -4,6 +4,9 @@
     <button ng-click="addList(lists)">Ajouter</button>
 </form>
 <div class="info-alert" ng-repeat="list in lists">
-    <div><a href="" ng-click="detailList(list)">{{list.label}}</a></div>
+    <div><a href="#" ng-click="detailList(list)">{{list.label}}</a></div>
     <div><button ng-click="deleteList(list)">Delete</button></div>
+    <div><button ng-click="detailList(list)">Voir les tâches</button></div>
+    <div>
+    </div>
 </div>
