@@ -68,6 +68,28 @@ angular.module("todo").controller("TaskController",["$scope", "$http", "Task", "
             }
         });
 
+        // On modifie une tâche
+        $scope.modifyTask = function(){
+            return Task.modifyTask;
+        }
+        $scope.$watch($scope.modifyTask, function(newValue, oldValue){
+            if (newValue) {
+                var url = "http://todos.api.netlor.fr/lists/"+newValue.parent+"/todos/"+newValue.id;
+                $http.put(url, {
+                        "text": newValue.text
+                    },
+                    {
+                        headers: {
+                            "Authorization": "Token token=47244e6526354e15a3b3f9386de73d24"
+                        }
+                }).then(function(response){
+                    $scope.refresh([newValue, newValue.parent], oldValue);
+                },function(error){
+                    console.log(error);
+                });
+            }
+        });
+
         // On rafraîchit le template
         $scope.refresh = function(newValue, oldValue){
             $http.get("http://todos.api.netlor.fr/lists/"+newValue[1]+"/todos",{

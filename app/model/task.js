@@ -13,6 +13,10 @@ angular.module("todo").service("Task",["$http",
         Task.prototype.deleteTask = function(){
             Task.deleteTask = this;
         }
+        Task.prototype.modifyTask = function(){
+            console.log(this);
+            Task.modifyTask = this;
+        }
 
         return Task;
     }

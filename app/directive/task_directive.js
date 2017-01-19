@@ -9,6 +9,10 @@ angular.module("todo").directive("tasks",[
                 },
                 scope.deleteTask = function(task){
                     task.deleteTask();
+                },
+                scope.modifyTask = function(task){
+                    task.text = this.new_task_name;
+                    task.modifyTask();
                 }
             }
         };
