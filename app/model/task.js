@@ -10,6 +10,9 @@ angular.module("todo").service("Task",["$http",
             tab = [task_to_add, id_list];
             Task.addTask = tab;
         }
+        Task.prototype.deleteTask = function(){
+            Task.deleteTask = this;
+        }
 
         return Task;
     }

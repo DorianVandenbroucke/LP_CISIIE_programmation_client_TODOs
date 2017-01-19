@@ -4,5 +4,8 @@
 </form>
 <div class="info-alert" ng-repeat="task in tasks">
   <div><strong>{{task.text}}</strong></div>
+  <div class="text-align-right">
+    <button class="yellow-btn" ng-click="deleteTask(task)">Supprimer</button>
+  </div>
   {{task.parent}}
 </div>
