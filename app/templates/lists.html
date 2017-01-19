@@ -7,6 +7,8 @@
     <div><a href="#" ng-click="detailList(list)">{{list.label}}</a></div>
     <div><button ng-click="deleteList(list)">Delete</button></div>
     <div><button ng-click="detailList(list)">Voir les tâches</button></div>
-    <div>
-    </div>
+    <form>
+        <input type="text" ng-model="new_list_name" placeholder="Modifier le nom de la liste" />
+        <button ng-click="modifyList(list)">Modifier</button>
+    </form>
 </div>

@@ -41,12 +41,12 @@ angular.module("todo").controller("ListController",["$scope", "$http", "List",
             if (newValue) {
                 var url = "http://todos.api.netlor.fr/lists";
                 $http.post(url, {
-                    headers: {
-                        "Authorization": "Token token=47244e6526354e15a3b3f9386de73d24"
-                    },
-                    data: {
                         "label": newValue
-                    }
+                    },
+                    {
+                        headers: {
+                            "Authorization": "Token token=47244e6526354e15a3b3f9386de73d24"
+                        }
                 }).then(function(response){
                     $scope.refresh();
                 },function(error){
