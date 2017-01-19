@@ -1,7 +1,7 @@
 <h3>Vos listes</h3>
 <form>
     <input type="text" ng-model="list_name" placeholder="Ajouter une liste" />
-    <button ng-click="addList()">Ajouter</button>
+    <button ng-click="addList(lists)">Ajouter</button>
 </form>
 <div class="info-alert" ng-repeat="list in lists">
     <div><a href="" ng-click="detailList(list)">{{list.label}}</a></div>

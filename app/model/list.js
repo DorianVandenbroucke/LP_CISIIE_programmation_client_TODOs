@@ -9,6 +9,10 @@ angular.module("todo").service("List",["$http",
             List.currentList = this;
         }
 
+        List.prototype.addList = function(){
+            console.log(this.list_name);
+        }
+
         return List;
     }
 ]);

@@ -1,4 +1,4 @@
-angular.module("todo").directive("lists",[
+angular.module("todo").directive("lists", [
     function(){
         return{
             restrict: "E",
@@ -10,8 +10,9 @@ angular.module("todo").directive("lists",[
                 scope.detailList = function(list){
                     list.detailList();
                 },
-                scope.addList = function() {
-                    console.log(this.list_name);
+                scope.addList = function(lists){
+                    console.log(lists.prototype);
+                    //lists.__proto__.addList();
                 }
             }
         };
