@@ -5,5 +5,5 @@
 </form>
 <div class="info-alert" ng-repeat="list in lists">
     <div><a href="" ng-click="detailList(list)">{{list.label}}</a></div>
-    <div><button ng-click="deleteList()">Delete</button></div>
+    <div><button ng-click="deleteList(list)">Delete</button></div>
 </div>
