@@ -55,6 +55,28 @@ angular.module("todo").controller("ListController",["$scope", "$http", "List",
             }
         });
 
+        // On modifie une liste
+        $scope.modifyList = function(){
+            return List.modifyList;
+        }
+        $scope.$watch($scope.modifyList, function(newValue, oldValue){
+            if (newValue) {
+                var url = "http://todos.api.netlor.fr/lists/"+newValue.id;
+                $http.put(url, {
+                        "label": newValue.label
+                    },
+                    {
+                        headers: {
+                            "Authorization": "Token token=47244e6526354e15a3b3f9386de73d24"
+                        }
+                }).then(function(response){
+                    $scope.refresh();
+                },function(error){
+                    console.log(error);
+                });
+            }
+        });
+
         // On rafraîchit la page
         $scope.refresh = function(){
             $http.get("http://todos.api.netlor.fr/lists",{
