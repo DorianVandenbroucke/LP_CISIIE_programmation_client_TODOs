@@ -23,13 +23,17 @@
   </head>
 
   <body class="grid_float" ng-app="todo">
-    <h1>Listes de vos tâches</h1>
-    <section ng-controller="ListController" id="lists">
+    <div class="row text-align-center">
+        <h1>Listes de vos tâches</h1>
+    </div>
+    <section class="column_4" ng-controller="ListController" id="lists">
+        <h3 class="text-align-center">Vos listes</h3>
         <lists />
     </section>
-    <div ng-controller="TaskController" id="task">
+    <section class="column_4" ng-controller="TaskController" id="task">
+        <h3 class="text-align-center">Vos tâches</h3>
         <tasks />
-    </div>
+    </section>
 
   </body>
 

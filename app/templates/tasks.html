@@ -1,4 +1,8 @@
-<h3>Vos tâches</h3>
+<form>
+    <input type="text" ng-model="task_name" placeholder="Ajouter une tâche" />
+    <button ng-click="addTask(tasks)">Ajouter</button>
+</form>
 <div class="info-alert" ng-repeat="task in tasks">
   <div><strong>{{task.text}}</strong></div>
+  {{task.parent}}
 </div>
