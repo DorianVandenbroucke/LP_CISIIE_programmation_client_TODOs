@@ -1,6 +1,5 @@
 angular.module("todo").controller("TaskController",["$scope", "$http", "Task", "List",
     function($scope, $http, Task, List){
-        console.log(List.currentList);
         $scope.currentList = function(){
             return List.currentList;
         }
@@ -12,6 +11,7 @@ angular.module("todo").controller("TaskController",["$scope", "$http", "Task", "
                         "Authorization": "Token token=47244e6526354e15a3b3f9386de73d24"
                     }
                 }).then(function(response){
+                    $scope.parent_list = newValue;
                     $scope.tasks = [];
                     if (response.data.todos) {
                         response.data.todos.forEach(function(data){

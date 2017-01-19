@@ -1,9 +1,10 @@
+<h4>{{parent_list.label}}</h4>
 <form>
     <input type="text" ng-model="task_name" placeholder="Ajouter une tâche" />
     <button ng-click="addTask(tasks)">Ajouter</button>
 </form>
 <div class="info-alert" ng-repeat="task in tasks">
-  <div><strong>{{task.text}}</strong></div>
+  <div><input type="checkbox" /><strong>{{task.text}}</strong></div>
   <div class="text-align-right">
     <button class="yellow-btn" ng-click="deleteTask(task)">Supprimer</button>
   </div>
@@ -11,5 +12,4 @@
       <input type="text" ng-model="new_task_name" placeholder="Modifier le nom de la tâche" />
       <button ng-click="modifyTask(task)">Modifier</button>
   </form>
-  {{task.parent}}
 </div>
