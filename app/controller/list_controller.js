@@ -34,10 +34,10 @@ angular.module("todo").controller("ListController",["$scope", "$http", "List",
         });
 
         // On ajoute une liste
-        $scope.addList = function(){
-            return List.addList;
+        $scope.add = function(){
+            return List.add;
         }
-        $scope.$watch($scope.addList, function(newValue, oldValue){
+        $scope.$watch($scope.add, function(newValue, oldValue){
             if (newValue) {
                 var url = "http://todos.api.netlor.fr/lists";
                 $http.post(url, {
