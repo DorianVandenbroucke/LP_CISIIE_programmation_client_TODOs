@@ -2,16 +2,19 @@
     <input type="text" ng-model="list_name" placeholder="Ajouter une liste" />
     <button ng-click="addList()"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
 </form>
-<div class="info-alert" ng-repeat="list in lists">
-    <div class="column_4">
-        <strong href="#" ng-click="detailList(list)">{{list.label}}</strong>
+<div class="info-alert row" ng-repeat="list in lists">
+    <div class="row">
+        <div class="column_4">
+            <strong href="#" ng-click="detailList(list)">{{list.label}}</strong>
+            <button class="blue-btn" ng-click="modifyList(list)">Modifier</button>
+        </div>
+        <div class="column_4 text-align-right">
+            <button class="green-btn" ng-click="detailList(list)">Voir les tâches</button>
+            <button class="btn" ng-click="deleteList(list)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        </div>
+        <!-- <form>
+            <input type="text" ng-model="new_list_name" placeholder="Modifier le nom de la liste" />
+            <button class="blue-btn" ng-click="modifyList(list)">Modifier</button>
+        </form> -->
     </div>
-    <div class="column_4 text-align-right">
-        <button class="green-btn" ng-click="detailList(list)">Voir les tâches</button>
-        <button class="btn" ng-click="deleteList(list)"><i class="fa fa-trash" aria-hidden="true"></i></button>
-    </div>
-    <form>
-        <input type="text" ng-model="new_list_name" placeholder="Modifier le nom de la liste" />
-        <button class="blue-btn" ng-click="modifyList(list)">Modifier</button>
-    </form>
 </div>
