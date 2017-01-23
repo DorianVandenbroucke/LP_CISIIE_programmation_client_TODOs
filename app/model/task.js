@@ -17,7 +17,9 @@ angular.module("todo").service("Task",["$http",
             console.log(this);
             Task.modifyTask = this;
         }
-
+        Task.prototype.verifyCheck = function(checked){
+            Task.checkTask = [this, checked];
+        }
         return Task;
     }
 ]);
