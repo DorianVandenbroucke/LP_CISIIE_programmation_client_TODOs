@@ -1,5 +1,5 @@
-angular.module("todo").directive("lists", [
-    function(){
+angular.module("todo").directive("lists", ["List",
+    function(List){
         return{
             restrict: "E",
             templateUrl: "app/templates/lists.html",
@@ -10,8 +10,8 @@ angular.module("todo").directive("lists", [
                 scope.detailList = function(list){
                     list.detailList();
                 },
-                scope.addList = function(l){
-                     l[0].addList(this.list_name);
+                scope.addList = function(){
+                     List.addList(scope.list_name);
                 },
                 scope.modifyList = function(list){
                     list.label = this.new_list_name;
