@@ -3,6 +3,7 @@ angular.module("todo").service("Task",["$http",
         var Task = function(data){
             this.parent = data.list_id.$oid;
             this.text = data.text;
+            this.done = data.done;
             this.id = data.id;
         }
 
