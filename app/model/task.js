@@ -6,9 +6,9 @@ angular.module("todo").service("Task",["$http",
             this.id = data.id;
         }
 
-        Task.prototype.addTask = function(task_to_add, id_list){
+        Task.addTask = function(task_to_add, id_list){
             tab = [task_to_add, id_list];
-            Task.addTask = tab;
+            Task.add = tab;
         }
         Task.prototype.deleteTask = function(){
             Task.deleteTask = this;

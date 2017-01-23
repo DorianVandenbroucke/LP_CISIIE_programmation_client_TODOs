@@ -28,10 +28,10 @@ angular.module("todo").controller("TaskController",["$scope", "$http", "Task", "
         });
 
         // On ajoute une tâche
-        $scope.addTask = function(){
-            return Task.addTask;
+        $scope.add = function(){
+            return Task.add;
         }
-        $scope.$watch($scope.addTask, function(newValue, oldValue){
+        $scope.$watch($scope.add, function(newValue, oldValue){
             if (newValue) {
                 var url = "http://todos.api.netlor.fr/lists/"+newValue[1]+"/todos";
                 $http.post(url, {
