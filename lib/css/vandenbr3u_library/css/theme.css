@@ -196,11 +196,8 @@ button, .btn, .jumbotron button, .blue-btn, .green-btn, .yellow-btn {
     color: #bf0000; }
 
 .blue-btn {
-  background-color: #003e5c;
-  border: 1px solid #001b29;
-  color: #b7e3f9; }
-  .blue-btn:hover {
-    background-color: #001b29; }
+  background-color: #a7dae5;
+  color: #001b29; }
 
 .green-btn {
   background-color: #009812;

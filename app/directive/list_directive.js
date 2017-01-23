@@ -11,7 +11,7 @@ angular.module("todo").directive("lists", ["List",
                     list.detailList();
                 },
                 scope.addList = function(){
-                     List.addList(scope.list_name);
+                    List.addList(scope.list_name);
                 },
                 scope.modifyList = function(list){
                     list.label = this.new_list_name;

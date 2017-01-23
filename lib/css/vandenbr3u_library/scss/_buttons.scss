@@ -30,12 +30,8 @@ button{
 
 .blue-btn{
   @extend button;
-  background-color: #003e5c;
-  border: 1px solid #001b29;
-  color: #b7e3f9;
-  &:hover{
-    background-color: #001b29;
-  }
+  background-color: $infoAlertSecondColor;
+  color: #001b29;
 }
 
 .green-btn{
