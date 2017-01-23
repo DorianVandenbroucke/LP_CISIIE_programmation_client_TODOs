@@ -179,20 +179,21 @@ button, .btn, .jumbotron button, .blue-btn, .green-btn, .yellow-btn {
   font-family: "Open Sans Condensed";
   font-size: 1.2em;
   padding: 5px 12px;
-  text-align: center; }
+  text-align: center;
+  background: #fff; }
   button:hover, .btn:hover, .blue-btn:hover, .green-btn:hover, .yellow-btn:hover {
     transition: background-color 0.5s; }
 
 .btn, .jumbotron button, .jumbotron .btn, .jumbotron .blue-btn, .jumbotron .green-btn, .jumbotron .yellow-btn {
-  background-color: #e18d8d;
+  background-color: #bf0000;
   border: 1px solid #bf0000;
-  color: #bf0000; }
+  color: #ccc; }
   .btn:focus, .jumbotron button:focus, .jumbotron .blue-btn:focus, .jumbotron .green-btn:focus, .jumbotron .yellow-btn:focus {
     background-color: #590000;
     color: #cc3c3c; }
   .btn:hover, .jumbotron button:hover, .jumbotron .blue-btn:hover, .jumbotron .green-btn:hover, .jumbotron .yellow-btn:hover {
-    background-color: #bf0000;
-    color: #e18d8d; }
+    background-color: #e18d8d;
+    color: #bf0000; }
 
 .blue-btn {
   background-color: #003e5c;

@@ -7,6 +7,7 @@ button{
   font-size: 1.2em;
   padding: 5px 12px;
   text-align: center;
+  background: #fff;
   &:hover{
     transition: background-color 0.5s;
   }
@@ -14,16 +15,16 @@ button{
 
 .btn{
   @extend button;
-  background-color: $buttonBackgroundColor;
+  background-color: $buttonColor;
   border: 1px solid $buttonColor;
-  color: $buttonColor;
+  color: #ccc;
   &:focus{
     background-color: darken($buttonColor, 20);
     color: darken($buttonBackgroundColor, 20);
   }
   &:hover{
-    background-color: $buttonColor;
-    color: $buttonBackgroundColor;
+    background-color: $buttonBackgroundColor;
+    color: $buttonColor;
   }
 }
 
