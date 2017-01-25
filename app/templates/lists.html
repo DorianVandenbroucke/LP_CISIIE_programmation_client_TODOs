@@ -5,7 +5,7 @@
 <div class="info-alert row" ng-repeat="list in lists">
     <div class="row">
         <div class="column_4">
-            <strong href="#" ng-click="detailList(list)">{{list.label}}</strong>
+            <strong href="#" ng-click="detailList(list)" ng-model="list_title" id="list_title">{{list.label}}</strong>
             <button class="blue-btn" ng-click="showInput()"><i class="fa fa-cog" aria-hidden="true"></i></button>
         </div>
         <div class="column_4 text-align-right">

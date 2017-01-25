@@ -16,6 +16,11 @@ angular.module("todo").directive("lists", ["List",
                 scope.modifyList = function(list){
                     list.label = this.new_list_name;
                     list.modifyList();
+                },
+                scope.showInput = function(){
+                    var title = this.list.label;
+                    var input = $("<input type='text' value='"+title+"'>");
+                    $('#list_title').replaceWith(input);
                 }
             }
         };
