@@ -15,7 +15,6 @@ angular.module("todo").service("List",["$http",
             List.deleteList = this;
         }
         List.prototype.modifyList = function(){
-            console.log(this);
             List.modifyList = this;
         }
 

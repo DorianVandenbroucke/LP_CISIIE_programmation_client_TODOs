@@ -17,10 +17,10 @@ angular.module("todo").directive("lists", ["List",
                     list.label = this.new_list_name;
                     list.modifyList();
                 },
-                scope.showInput = function(){
-                    var title = this.list.label;
-                    var input = $("<input type='text' value='"+title+"'>");
-                    $('#list_title').replaceWith(input);
+                scope.showInput = function(list){
+                    var title = list.label;
+                    var input = $("<input type='text' value='"+title+"'> ng-model='new_list_name' ");
+                    $("."+title).replaceWith(input);
                 }
             }
         };
