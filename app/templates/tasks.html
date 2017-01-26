@@ -1,10 +1,10 @@
 <h4>{{parent_list.label}}</h4>
-<form>
+<form ng-if="tasks">
     <input type="text" ng-model="task_name" placeholder="Ajouter une tâche" />
     <button ng-click="addTask()"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
 </form>
 <div class="info-alert" ng-repeat="task in tasks | orderBy: 'done'">
-  <div>
+  <div class="row">
       <div class="column_3">
           <input type="checkbox" ng-click="verifyCheck(task)" ng-model="checked" ng-checked="task.done"/>
           <strong>{{task.text}}</strong>

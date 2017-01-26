@@ -17,10 +17,8 @@ angular.module("todo").directive("lists", ["List",
                     list.label = this.new_list_name;
                     list.modifyList();
                 },
-                scope.showInput = function(list){
-                    var title = list.label;
-                    var input = $("<input type='text' value='"+title+"'> ng-model='new_list_name' ");
-                    $("."+title).replaceWith(input);
+                scope.hiddenButton = function(list){
+                    $("."+list.label).hide();
                 }
             }
         };
