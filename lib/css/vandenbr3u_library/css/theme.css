@@ -172,7 +172,7 @@ ul {
   ul.list-without-style li {
     list-style-type: none; }
 
-button, .btn, .jumbotron button, .blue-btn, .green-btn, .yellow-btn {
+button, .btn, .jumbotron button, .blue-btn, .green-btn, .green-btn-check, .yellow-btn {
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -181,20 +181,20 @@ button, .btn, .jumbotron button, .blue-btn, .green-btn, .yellow-btn {
   padding: 5px 12px;
   text-align: center;
   background: #fff; }
-  button:hover, .btn:hover, .blue-btn:hover, .green-btn:hover, .yellow-btn:hover {
+  button:hover, .btn:hover, .blue-btn:hover, .green-btn:hover, .green-btn-check:hover, .yellow-btn:hover {
     transition: background-color 0.5s; }
 
 .trash {
   float: right; }
 
-.btn, .jumbotron button, .jumbotron .btn, .jumbotron .blue-btn, .jumbotron .green-btn, .jumbotron .yellow-btn {
+.btn, .jumbotron button, .jumbotron .btn, .jumbotron .blue-btn, .jumbotron .green-btn, .jumbotron .green-btn-check, .jumbotron .yellow-btn {
   background-color: #bf0000;
   border: 1px solid #bf0000;
   color: #ccc; }
-  .btn:focus, .jumbotron button:focus, .jumbotron .blue-btn:focus, .jumbotron .green-btn:focus, .jumbotron .yellow-btn:focus {
+  .btn:focus, .jumbotron button:focus, .jumbotron .blue-btn:focus, .jumbotron .green-btn:focus, .jumbotron .green-btn-check:focus, .jumbotron .yellow-btn:focus {
     background-color: #590000;
     color: #cc3c3c; }
-  .btn:hover, .jumbotron button:hover, .jumbotron .blue-btn:hover, .jumbotron .green-btn:hover, .jumbotron .yellow-btn:hover {
+  .btn:hover, .jumbotron button:hover, .jumbotron .blue-btn:hover, .jumbotron .green-btn:hover, .jumbotron .green-btn-check:hover, .jumbotron .yellow-btn:hover {
     background-color: #e18d8d;
     color: #bf0000; }
 
@@ -208,6 +208,10 @@ button, .btn, .jumbotron button, .blue-btn, .green-btn, .yellow-btn {
   color: #b6f4bd; }
   .green-btn:hover {
     background-color: #004b09; }
+
+.green-btn-check {
+  background-color: #a4e1b4;
+  color: #009812; }
 
 .large-btn {
   border-radius: 7px;
