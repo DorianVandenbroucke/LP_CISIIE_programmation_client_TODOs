@@ -1,15 +1,21 @@
 <h4>{{parent_list.label}}</h4>
-<form>
+<form ng-if="tasks">
     <input type="text" ng-model="task_name" placeholder="Ajouter une tâche" />
     <button ng-click="addTask()"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
 </form>
-<div class="info-alert" ng-repeat="task in tasks">
-  <div><input type="checkbox" ng-click="verifyCheck(task)" ng-model="checked" ng-checked="task.done"/><strong>{{task.text}}</strong></div>
+<div class="info-alert" ng-repeat="task in tasks | orderBy: 'done'">
+  <div>
+      <input type="checkbox" ng-click="verifyCheck(task)" ng-model="checked" ng-checked="task.done"/>
+      <div>
+          <strong ng-model="showTitle">{{task.text}}</strong>
+          <form ng-if="modifyNameTask">
+              <input type="text" ng-model="new_task_name" ng-value="task.text" />
+              <button class="blue-btn" ng-click="modifyTask(task)"><i class="fa fa-cog" aria-hidden="true"></i></button>
+          </form>
+          <button class="blue-btn" ng-click="modifyNameTask=true"><i class="fa fa-cog" aria-hidden="true"></i></button>
+      </div>
+  </div>
   <div class="text-align-right">
     <button class="btn" ng-click="deleteTask(task)"><i class="fa fa-trash" aria-hidden="true"></i></button>
   </div>
-  <form>
-      <input type="text" ng-model="new_task_name" placeholder="Modifier le nom de la tâche" />
-      <button class="blue-btn" ng-click="modifyTask(task)"><i class="fa fa-cog" aria-hidden="true"></i></button>
-  </form>
 </div>
