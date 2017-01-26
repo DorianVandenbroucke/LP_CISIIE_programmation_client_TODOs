@@ -4,7 +4,7 @@
 </form>
 <div class="info-alert row" ng-repeat="list in lists">
     <div class="row">
-        <div class="column_4">
+        <div class="column_5">
             <strong href="#" ng-click="detailList(list)" ng-model="list_title">{{list.label}}</strong>
             <button class="blue-btn" ng-class="list.label" ng-click="showInputList=true"><i class="fa fa-cog" aria-hidden="true"></i></button>
             <form ng-if="showInputList">
@@ -12,7 +12,7 @@
                 <button class="blue-btn" ng-click="modifyList(list)"><i class="fa fa-check" aria-hidden="true"></i></button>
             </form>
         </div>
-        <div class="column_4 text-align-right">
+        <div class="column_3 text-align-right">
             <button class="green-btn" ng-click="detailList(list)">Voir les tâches</button>
             <button class="btn" ng-click="deleteList(list)"><i class="fa fa-trash" aria-hidden="true"></i></button>
         </div>
