@@ -13,6 +13,10 @@ button{
   }
 }
 
+.trash{
+    float: right;
+}
+
 .btn{
   @extend button;
   background-color: $buttonColor;
