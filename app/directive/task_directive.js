@@ -12,11 +12,16 @@ angular.module("todo").directive("tasks",
                     task.deleteTask();
                 },
                 scope.modifyTask = function(task){
-                    task.text = this.new_task_name;
+                    if(this.new_task_name){
+                        task.text = this.new_task_name;
+                    }
                     task.modifyTask();
                 },
                 scope.verifyCheck = function(task){
                     task.verifyCheck(this.checked);
+                },
+                scope.hiddenButton = function(task){
+                    $("."+task.text).hide();
                 }
             }
         };
