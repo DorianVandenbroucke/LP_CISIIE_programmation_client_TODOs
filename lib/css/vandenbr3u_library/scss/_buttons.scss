@@ -51,7 +51,7 @@ button{
 .green-btn-check{
   @extend button;
   background-color: $successAlertSecondColor;
-  color: #009812;
+  color: $successAlertColor;
 }
 
 .large-btn{
