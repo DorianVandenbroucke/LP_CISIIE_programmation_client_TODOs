@@ -4,17 +4,16 @@
     <button ng-click="addTask()"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
 </form>
 <div class="info-alert" ng-repeat="task in tasks | orderBy: 'done'">
-  <div class="row">
-      <div class="column_3">
-          <input type="checkbox" ng-click="verifyCheck(task)" ng-model="checked" ng-checked="task.done"/>
-          <strong>{{task.text}}</strong>
-          <button class="blue-btn" ng-class="task.text" ng-click="showInput=true; hiddenButton(task)"><i class="fa fa-cog" aria-hidden="true"></i></button>
-          <form ng-if="showInput">
-              <input type="text" ng-model="new_task_name" ng-value="task.text" />
-              <button class="blue-btn" ng-click="modifyTask(task)"><i class="fa fa-cog" aria-hidden="true"></i></button>
-          </form>
-  </div>
-  <div class="text-align-right">
-    <button class="btn" ng-click="deleteTask(task)"><i class="fa fa-trash" aria-hidden="true"></i></button>
-  </div>
+    <div class="row">
+        <div>
+            <input type="checkbox" ng-click="verifyCheck(task)" ng-model="checked" ng-checked="task.done"/>
+            <strong>{{task.text}}</strong>
+            <button class="blue-btn" ng-class="task.text" ng-click="showInput=true; hiddenButton(task)"><i class="fa fa-cog" aria-hidden="true"></i></button>
+            <button class="btn trash" ng-click="deleteTask(task)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            <form ng-if="showInput">
+                <input type="text" ng-model="new_task_name" ng-value="task.text" />
+                <button class="blue-btn" ng-click="modifyTask(task)"><i class="fa fa-check" aria-hidden="true"></i></button>
+            </form>
+        </div>
+    </div>
 </div>

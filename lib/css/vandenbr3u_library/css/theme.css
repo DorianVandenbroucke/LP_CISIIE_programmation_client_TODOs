@@ -184,6 +184,9 @@ button, .btn, .jumbotron button, .blue-btn, .green-btn, .yellow-btn {
   button:hover, .btn:hover, .blue-btn:hover, .green-btn:hover, .yellow-btn:hover {
     transition: background-color 0.5s; }
 
+.trash {
+  float: right; }
+
 .btn, .jumbotron button, .jumbotron .btn, .jumbotron .blue-btn, .jumbotron .green-btn, .jumbotron .yellow-btn {
   background-color: #bf0000;
   border: 1px solid #bf0000;
