@@ -19,9 +19,6 @@ angular.module("todo").directive("tasks",
                 },
                 scope.verifyCheck = function(task){
                     task.verifyCheck(this.checked);
-                },
-                scope.hiddenButton = function(task){
-                    $("."+task.text).hide();
                 }
             }
         };

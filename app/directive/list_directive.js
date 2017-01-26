@@ -16,9 +16,6 @@ angular.module("todo").directive("lists", ["List",
                 scope.modifyList = function(list){
                     list.label = this.new_list_name;
                     list.modifyList();
-                },
-                scope.hiddenButton = function(list){
-                    $("."+list.label).hide();
                 }
             }
         };

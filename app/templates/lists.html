@@ -6,7 +6,7 @@
     <div class="row">
         <div class="column_4">
             <strong href="#" ng-click="detailList(list)" ng-model="list_title">{{list.label}}</strong>
-            <button class="blue-btn" ng-class="list.label" ng-click="showInputList=true; hiddenButton(list)"><i class="fa fa-cog" aria-hidden="true"></i></button>
+            <button class="blue-btn" ng-class="list.label" ng-click="showInputList=true"><i class="fa fa-cog" aria-hidden="true"></i></button>
             <form ng-if="showInputList">
                 <input type="text" ng-model="new_list_name" ng-value="list.label" />
                 <button class="blue-btn" ng-click="modifyList(list)"><i class="fa fa-check" aria-hidden="true"></i></button>
