@@ -48,6 +48,12 @@ button{
   }
 }
 
+.green-btn-check{
+  @extend button;
+  background-color: $successAlertSecondColor;
+  color: $successAlertColor;
+}
+
 .large-btn{
   border-radius: 7px;
   font-size: 1.3em;
