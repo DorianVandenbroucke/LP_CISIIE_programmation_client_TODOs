@@ -1,6 +1,6 @@
 <h4>{{parent_list.label}}</h4>
 <form ng-if="tasks">
-    <input type="text" ng-model="task_name" placeholder="Ajouter une tâche" />
+    <input type="text" id="task_name" ng-model="task_name" placeholder="Ajouter une tâche" />
     <button ng-click="addTask()"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
 </form>
 <div ng-if="!tasks" class="warning-alert">

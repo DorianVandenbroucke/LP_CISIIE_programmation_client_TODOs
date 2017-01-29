@@ -6,7 +6,11 @@ angular.module("todo").directive("tasks",
             templateUrl: "app/templates/tasks.html",
             link: function(scope, element, attrs){
                 scope.addTask = function(){
-                    Task.addTask(scope.task_name, scope.parent_list.id);
+                    if(scope.task_name){
+                        Task.addTask(scope.task_name, scope.parent_list.id);
+                    }else{
+                        Task.addTask($("#task_name").val(), scope.parent_list.id);
+                    }
                 },
                 scope.deleteTask = function(task){
                     task.deleteTask();
