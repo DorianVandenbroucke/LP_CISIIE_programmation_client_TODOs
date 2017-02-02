@@ -1,8 +1,12 @@
-<h4>{{parent_list.label}}</h4>
-<form ng-if="tasks">
-    <input type="text" id="task_name" ng-model="task_name" placeholder="Ajouter une tâche" />
-    <button ng-click="addTask()"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-</form>
+<div class="row">
+    <div class="column_7">
+        <h4>{{parent_list.label}}</h4>
+        <form ng-if="tasks">
+            <input type="text" id="task_name" ng-model="task_name" placeholder="Ajouter une tâche" />
+            <button ng-click="addTask()"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+        </form>
+    </div>
+</div>
 <div ng-if="!tasks" class="warning-alert">
     Aucune tâche à afficher
 </div>
